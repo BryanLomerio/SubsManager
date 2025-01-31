@@ -1,6 +1,6 @@
-# Subscription Manager
+# subsManager
 
-Subscription Manager is a personal finance tool that helps you keep track of your recurring subscriptions. Whether it's for digital services, streaming platforms, or other regular payments, this app makes it easy to stay on top of what you owe. Built with React and Tailwind CSS, it offers a simple and clean interface.
+subsManager is a personal finance tool that helps you keep track of your recurring subscriptions. Whether it's for digital services, streaming platforms, or other regular payments, this app makes it easy to stay on top of what you owe. Built with React and Tailwind CSS, it offers a simple and clean interface.
 
 ### Features:
 
