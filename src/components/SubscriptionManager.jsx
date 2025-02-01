@@ -16,6 +16,8 @@ const SubscriptionManager = () => {
     notes: ''
   });
 
+  const [showChart, setShowChart] = useState(false);  // State for toggling the chart visibility
+
   const currencies = [
     { code: 'USD', symbol: '$', name: 'US Dollar' },
     { code: 'PHP', symbol: '₱', name: 'Philippine Peso' },
@@ -77,9 +79,7 @@ const SubscriptionManager = () => {
   return (
     <div className="container mx-auto p-8 max-w-4xl bg-white min-h-screen">
       <h1 className="text-3xl font-bold mb-6 text-gray-800 flex items-center">
-        <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
-          subsManager
-        </span>
+        <span className="">subsManager</span>
         <TbMoneybag style={{ marginLeft: '10px', verticalAlign: 'middle' }} />
       </h1>
 
@@ -108,10 +108,21 @@ const SubscriptionManager = () => {
         currencies={currencies}
       />
 
-      <SubscriptionChart
-        subscriptions={subscriptions}
-        currencies={currencies}
-      />
+      <div className="flex justify-end mb-4">
+        <button
+          onClick={() => setShowChart(!showChart)} 
+          className="p-2 bg-[#2A2A2A] text-white rounded-md"
+        >
+          {showChart ? 'Hide Graph' : 'Show Graph'} 
+        </button>
+      </div>
+
+      {showChart && (
+        <SubscriptionChart
+          subscriptions={subscriptions}
+          currencies={currencies}
+        />
+      )}
     </div>
   );
 };

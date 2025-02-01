@@ -62,7 +62,7 @@ const SubscriptionForm = ({ formData, setFormData, currencies, addSubscription }
 
       <button
         type="submit"
-        className="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-200 font-medium"
+        className="bg-[#2A2A2A] text-white py-2 px-4 rounded-md hover:bg-[#2C2C2C] transition-colors duration-200 font-medium"
       >
         Add Subscription
       </button>

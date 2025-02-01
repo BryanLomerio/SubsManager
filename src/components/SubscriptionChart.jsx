@@ -7,20 +7,18 @@ import {
     Title,
     Tooltip,
     Legend,
-  } from 'chart.js';
-  
-  ChartJS.register(
+} from 'chart.js';
+
+ChartJS.register(
     CategoryScale,
     LinearScale,
     BarElement,
     Title,
     Tooltip,
     Legend
-  );
+);
 
-  import { Bar } from 'react-chartjs-2';
-
-  
+import { Bar } from 'react-chartjs-2';
 import { formatCurrency } from '../utils/formatCurrency';
 
 const SubscriptionChart = ({ subscriptions, currencies }) => {
