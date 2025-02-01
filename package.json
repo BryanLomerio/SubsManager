@@ -22,11 +22,18 @@
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
     "eslint": "^9.17.0",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.3.3",
     "vite": "^6.0.5"
-  }
+  },
+  "description": "subsManager is a personal finance tool that helps you keep track of your recurring subscriptions. Whether it's for digital services, streaming platforms, or other regular payments, this app makes it easy to stay on top of what you owe. Built with React and Tailwind CSS, it offers a simple and clean interface.",
+  "main": "eslint.config.js",
+  "author": "",
+  "license": "ISC"
 }
