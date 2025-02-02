@@ -16,7 +16,7 @@ const SubscriptionManager = () => {
     notes: ''
   });
 
-  const [showChart, setShowChart] = useState(false);  // State for toggling the chart visibility
+  const [showChart, setShowChart] = useState(false); 
 
   const currencies = [
     { code: 'USD', symbol: '$', name: 'US Dollar' },

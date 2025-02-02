@@ -1,6 +1,7 @@
 # subsManager
+is a simple, no-fuss tool that helps you keep track of all your recurring payments and subscriptions. Instead of dealing with complex databases and server setups, it saves everything directly in your browser's local storage. That means you get a lightweight, easy-to-use experience without the overhead of managing a backend—perfect for quickly managing your subscriptions without any extra hassle.
 
-subsManager is a personal finance tool that helps you keep track of your recurring subscriptions. Whether it's for digital services, streaming platforms, or other regular payments, this app makes it easy to stay on top of what you owe. Built with React and Tailwind CSS, it offers a simple and clean interface.
+---
 
 ### Features:
 
