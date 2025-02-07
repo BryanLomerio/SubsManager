@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { TbMoneybag } from "react-icons/tb";
+import { TbCreditCard } from "react-icons/tb";
 import SubscriptionForm from './SubscriptionForm';
 import SubscriptionList from './SubscriptionList';
 import SubscriptionChart from './SubscriptionChart';
@@ -15,8 +15,7 @@ const SubscriptionManager = () => {
     paymentDate: '',
     notes: ''
   });
-
-  const [showChart, setShowChart] = useState(false); 
+  const [showChart, setShowChart] = useState(false);
 
   const currencies = [
     { code: 'USD', symbol: '$', name: 'US Dollar' },
@@ -78,10 +77,13 @@ const SubscriptionManager = () => {
 
   return (
     <div className="container mx-auto p-8 max-w-4xl bg-white min-h-screen">
-      <h1 className="text-3xl font-bold mb-6 text-gray-800 flex items-center">
-        <span className="">subsManager</span>
-        <TbMoneybag style={{ marginLeft: '10px', verticalAlign: 'middle' }} />
+      <h1 className="text-3xl font-bold mb-2 text-gray-800 flex items-center">
+        <span>Subscription Manager</span>
+        <TbCreditCard className="ml-2 inline-block align-middle" />
       </h1>
+      <p className="text-sm text-gray-500 mb-6">
+        No sign-ups, no hassle—your subscriptions are saved directly in your browser. Even if you refresh or close the page, your data stays safe.
+      </p>
 
       <SubscriptionForm
         formData={formData}
@@ -110,10 +112,10 @@ const SubscriptionManager = () => {
 
       <div className="flex justify-end mb-4">
         <button
-          onClick={() => setShowChart(!showChart)} 
-          className="p-2 bg-[#2A2A2A] text-white rounded-md"
+          onClick={() => setShowChart(!showChart)}
+          className="p-2 bg-gray-800 text-white rounded-md"
         >
-          {showChart ? 'Hide Graph' : 'Show Graph'} 
+          {showChart ? 'Hide Graph' : 'Show Graph'}
         </button>
       </div>
 

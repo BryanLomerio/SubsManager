@@ -4,19 +4,19 @@ const SubscriptionForm = ({ formData, setFormData, currencies, addSubscription }
   return (
     <form
       onSubmit={addSubscription}
-      className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 p-6 bg-gray-50 rounded-lg shadow-sm"
+      className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 bg-white border border-gray-200 rounded-lg"
     >
       <input
         type="text"
         placeholder="Service Name"
-        className="p-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+        className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
         value={formData.name}
         onChange={e => setFormData({ ...formData, name: e.target.value })}
         required
       />
 
       <select
-        className="p-2 border rounded-md bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+        className="p-2 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-blue-500"
         value={formData.currency}
         onChange={e => setFormData({ ...formData, currency: e.target.value })}
       >
@@ -29,8 +29,8 @@ const SubscriptionForm = ({ formData, setFormData, currencies, addSubscription }
 
       <input
         type="number"
-        placeholder={`Amount (${currencies.find(c => c.code === formData.currency)?.symbol})`}
-        className="p-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+        placeholder={`Amount (${currencies.find(c => c.code === formData.currency)?.symbol || ''})`}
+        className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
         value={formData.amount}
         onChange={e => setFormData({ ...formData, amount: e.target.value })}
         step="0.01"
@@ -38,7 +38,7 @@ const SubscriptionForm = ({ formData, setFormData, currencies, addSubscription }
       />
 
       <select
-        className="p-2 border rounded-md bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+        className="p-2 border border-gray-300 rounded-md bg-white focus:outline-none focus:ring-1 focus:ring-blue-500"
         value={formData.billingCycle}
         onChange={e => setFormData({ ...formData, billingCycle: e.target.value })}
       >
@@ -49,7 +49,7 @@ const SubscriptionForm = ({ formData, setFormData, currencies, addSubscription }
 
       <input
         type="date"
-        className="p-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+        className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
         value={formData.paymentDate}
         onChange={e => setFormData({ ...formData, paymentDate: e.target.value })}
         required
@@ -57,7 +57,7 @@ const SubscriptionForm = ({ formData, setFormData, currencies, addSubscription }
 
       <textarea
         placeholder="Additional notes"
-        className="p-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none md:col-span-2"
+        className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 resize-none md:col-span-2"
         value={formData.notes}
         onChange={e => setFormData({ ...formData, notes: e.target.value })}
         rows="2"
@@ -65,7 +65,7 @@ const SubscriptionForm = ({ formData, setFormData, currencies, addSubscription }
 
       <button
         type="submit"
-        className="bg-[#2A2A2A] text-white text-sm py-1 px-3 rounded-md hover:bg-[#2C2C2C] transition-colors duration-200 font-medium"
+        className="bg-gray-800 text-white text-sm py-2 px-4 rounded-md hover:bg-gray-700 transition-colors duration-200 font-medium md:col-span-3"
       >
         Add Subscription
       </button>
